@@ -4,7 +4,6 @@ import java.io.IOException;
 
 //should probably be a singleton. only one will exist at a time
 public class Calculator {
-
 	
 	boolean debug = false;
 
@@ -72,7 +71,11 @@ public class Calculator {
 		System.out.println("Closing calculator :)");
 	}
 	
-	//Requires two operators, doesn't have existing value carry over
+	/*
+	 * TODO: PEMDAS
+	 * TODO: String parser > reads if starting with operator, carries over    
+ 	 *	value, if char, give error, if digit, overwrite existing value.       
+	 */
 	public void runCalculator() throws IOException {
 		coolCosmetic();
 		
@@ -136,24 +139,25 @@ public class Calculator {
 		return returnValue;
 	}
 	
-	public double addOp(double _inputValue1, double _inputValue2) {
+	private double addOp(double _inputValue1, double _inputValue2) {
 		double returnValue = 0.0;
 		returnValue = _inputValue1 + _inputValue2;
 		return returnValue;
 	}
 	
-	public double multiplyOp(double _inputValue1, double _inputValue2) {
+	private double multiplyOp(double _inputValue1, double _inputValue2) {
 		double returnValue = 0.0;
 		returnValue = _inputValue1 * _inputValue2;
 		return returnValue;
 	}
 	
-	public double subtractOp(double _inputValue1, double _inputValue2) {
+	private double subtractOp(double _inputValue1, double _inputValue2) {
 		double returnValue = 0.0;
 		returnValue = _inputValue1 - _inputValue2;
 		return returnValue;
 	}
-	public double divideOp(double _inputValue1, double _inputValue2) {
+	
+	private double divideOp(double _inputValue1, double _inputValue2) {
 		double returnValue = 0.0;
 		returnValue = _inputValue1 / _inputValue2;
 		return returnValue;
