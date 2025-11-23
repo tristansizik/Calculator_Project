@@ -11,9 +11,10 @@ import java.io.IOException;
 public class ApplicationHome {
 
 	private static boolean debug = true;
-	
+
 	public static void main(String[] args) throws IOException {
 		Calculator calc = new Calculator(debug);
+//		calc.runCalculator();
 		calc.runCalculator();
 	}
 }
